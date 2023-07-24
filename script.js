@@ -97,6 +97,11 @@ function getPasswordOptions() {
     alert("Invalid, Please enter a number between 8 and 128.");
   }
 
+  let includeLowercase = confirm("Do you want to include lowercase characters?");
+  let includeUppercase = confirm("Do you want to include uppercase characters?");
+  let includeNumeric = confirm("Do you want to include numeric characters?");
+  let includeSpecial = confirm("Do you want to include special characters ($@%&*, etc.)?");
+
   
 }
 
