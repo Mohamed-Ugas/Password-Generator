@@ -102,7 +102,9 @@ function getPasswordOptions() {
   let includeNumeric = confirm("Do you want to include numeric characters?");
   let includeSpecial = confirm("Do you want to include special characters ($@%&*, etc.)?");
 
-  
+  if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecial) {
+    alert("Please select one character type");
+  }
 }
 
 // Function for getting a random element from an array
