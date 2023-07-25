@@ -91,7 +91,7 @@ var upperCasedCharacters = [
 // Function to prompt user for password options
 function getPasswordOptions() {
   // Length of password
-  lengthOfpassword = parseInt(prompt("How long do your want your password to be (It can be between 8 or 128 characters)"));
+  var lengthOfpassword = parseInt(prompt("How long do your want your password to be (It can be between 8 or 128 characters)"));
 
   if (lengthOfpassword < 8 || lengthOfpassword > 128) {
     alert("Invalid, Please enter a number between 8 and 128.");
@@ -109,12 +109,27 @@ function getPasswordOptions() {
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-
+  var randomArray = Math.floor(Math.random() * arr.length);  
 }
 
 // Function to generate password with user input
 function generatePassword() {
-  console.log("I clicked the button");
+  var lengthOfpassword = parseInt(prompt("How long do your want your password to be (It can be between 8 or 128 characters)"));
+  if (lengthOfpassword < 8 || lengthOfpassword > 128) {
+    alert("Invalid, Please enter a number between 8 and 128.");
+  }
+
+  let includeLowercase = confirm("Do you want to include lowercase characters?");
+  let includeUppercase = confirm("Do you want to include uppercase characters?");
+  let includeNumeric = confirm("Do you want to include numeric characters?");
+  let includeSpecial = confirm("Do you want to include special characters ($@%&*, etc.)?");
+
+  if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecial) {
+    alert("Please select one character type");
+  } 
+
+  console.log(generatePassword);
+  return(generatePassword);
 }
 
 // Get references to the #generate element
@@ -130,3 +145,4 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
+
