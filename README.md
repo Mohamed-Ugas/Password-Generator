@@ -1,5 +1,6 @@
 # Password-Generator
 An app that runs in the browser and features dynamically updated HTML and CSS, all powered by JavaScript code.
+<img src = "password_generator.png">
 
 ## Requirements:
 Generate a password when the button is clicked.
